@@ -1,11 +1,9 @@
-﻿using System.Data;
-
-namespace TestTaskApi.Models
+﻿namespace TestTaskApi.Models
 {
-    public class Order : DataSet
+    public class Order
     {
         public Guid Id { get; set; }
-        public Customer CustomerId { get; set; }
+        public Customer Customer { get; set; }
         public DateOnly OrderDate { get; set; }
         public DateOnly? ShipmentDate { get; set; }
         public int? OrderNumber { get; set; }

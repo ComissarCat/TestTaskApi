@@ -1,8 +1,6 @@
-﻿using System.Data;
-
-namespace TestTaskApi.Models
+﻿namespace TestTaskApi.Models
 {
-    public class Item : DataSet
+    public class Item
     {
         public Guid Id { get; set; }
         public string Code { get; set; }

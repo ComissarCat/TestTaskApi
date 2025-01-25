@@ -1,12 +1,10 @@
-﻿using System.Data;
-
-namespace TestTaskApi.Models
+﻿namespace TestTaskApi.Models
 {
-    public class OrderItem : DataSet
+    public class OrderItem
     {
         public Guid Id { get; set; }
-        public Order OrderId { get; set; }
-        public Item ItemId { get; set; }
+        public Order Order { get; set; }
+        public Item Item { get; set; }
         public int ItemsCount { get; set; }
         public float ItemPrice { get; set; }
     }
