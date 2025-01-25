@@ -7,16 +7,10 @@ namespace TestTaskApi.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]
-    public partial class ItemsController : ControllerBase
+    public partial class ItemsController(ApplicationContext applicationContext) : ControllerBase
     {
-        private readonly ApplicationContext applicationContext;
         [GeneratedRegex(@"[0-9]{2}-[0-9]{4}-[A-Z]{2}[0-9]{2}")]
         private static partial Regex ItemCodeRegex();
-
-        public ItemsController(ApplicationContext applicationContext)
-        {
-            this.applicationContext = applicationContext;
-        }
 
         public async Task<IActionResult> GetItemsAsync()
         {
